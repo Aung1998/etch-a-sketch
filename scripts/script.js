@@ -2,7 +2,7 @@ const items = document.getElementsByClassName("item");
 
 let previous = '';
 
-for(let i = 0; i<=items.length; i++){
+for(let i = 0; i<items.length; i++){
     items[i].addEventListener("mouseenter", function(e){
         let name = getRandomString(5);
         var style = document.createElement('style');
