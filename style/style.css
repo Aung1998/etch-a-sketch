@@ -2,8 +2,8 @@
     display:grid;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 25% 25% 25% 25%;
-    width: 50vw;
-    height: 50vw;
+    width: 40vw;
+    height: 40vw;
     min-width: 300px;
     min-height: 300px;
     border: 1px solid black;
