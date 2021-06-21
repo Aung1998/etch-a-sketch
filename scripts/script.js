@@ -25,6 +25,7 @@ function randomHexColor(){
     return '#'+randomHexColor;
 }
 
+// create square x squard grid.
 function createGrid(squares) {
     removeChildNode(grid); //remove previous Grid with alll colored
     grid.style.setProperty('--rows', squares);
@@ -36,4 +37,4 @@ function createGrid(squares) {
     colorGrid(); // add Color function on new items
 }
 
-createGrid(16);
+createGrid(16); // create default 16 x 16 grid
