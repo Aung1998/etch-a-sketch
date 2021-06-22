@@ -1,5 +1,6 @@
 const items = document.getElementsByClassName("item");
 const grid = document.getElementById("grid");
+const btn = document.getElementById("btn");
 
 function colorGrid(color='colorful'){
     for(let i = 0; i<items.length; i++){
@@ -26,7 +27,7 @@ function randomHexColor(){
 }
 
 // create square x squard grid.
-function createGrid(squares) {
+function createGrid(squares=16) {
     removeChildNode(grid); //remove previous Grid with alll colored
     grid.style.setProperty('--rows', squares);
     grid.style.setProperty('--cols', squares);
@@ -37,4 +38,15 @@ function createGrid(squares) {
     colorGrid(); // add Color function on new items
 }
 
-createGrid(16); // create default 16 x 16 grid
+createGrid(); // create default 16 x 16 grid
+
+btn.addEventListener('click', function(e){
+    const size = document.getElementById("size");
+    const squares = size.value;
+    if (squares == ""){
+        createGrid();
+    }
+    else {
+        createGrid(parseInt(squares));
+    }
+})

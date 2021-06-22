@@ -27,3 +27,16 @@
 .item{
     transition:all 0.7s ease;
 }
+
+.size-div {
+    display: flex;
+    margin: 8px;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.field{
+    margin:8px;
+}
