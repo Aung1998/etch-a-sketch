@@ -1,6 +1,7 @@
 const items = document.getElementsByClassName("item");
 const grid = document.getElementById("grid");
 const btn = document.getElementById("btn");
+const slider = document.getElementById("size");
 
 function colorGrid(color='colorful'){
     for(let i = 0; i<items.length; i++){
@@ -41,12 +42,10 @@ function createGrid(squares=16) {
 createGrid(); // create default 16 x 16 grid
 
 btn.addEventListener('click', function(e){
-    const size = document.getElementById("size");
-    const squares = size.value;
-    if (squares == ""){
-        createGrid();
-    }
-    else {
-        createGrid(parseInt(squares));
-    }
+    slider.value = 16;
+    createGrid();
+})
+
+slider.addEventListener('mouseup', function(){
+    createGrid(this.value);
 })
